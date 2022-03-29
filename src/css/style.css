@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +8,9 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 99.5vw;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .cabecalho {
@@ -148,6 +151,25 @@ text-decoration: underline;
 opacity: 0.4;
 }
 
+#sidebar-menu, #sidebar-menu h3{
+  padding-top: 10px;
+}
+
+.banner{
+  background-image: url("https://www.oficinadanet.com.br/imagens/post/30022/capa-studio-ghibli-lanca-no-brasil-suas-trilhas-sonoras-no-spotify-01_1400x875_5e6168fc71454.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -3;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aluno_footer{
+  display: none;
+}
   
 .aluno_footer img {
     height: 40px;
@@ -159,14 +181,15 @@ opacity: 0.4;
 }
 
 .rodape{
-
     bottom:0;
-    width: 375px;
+    top: auto;
+    position: relative;
+    width: 100vw;
     height:auto;  
     background-color:#5B8899;
     text-align: center;
     color: white;
-    font-size: larger;
+    font-size: 12px;
+    z-index: -2;
 }
 
-@media (hove
