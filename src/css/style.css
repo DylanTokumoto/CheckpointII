@@ -7,9 +7,10 @@
     text-decoration: none;
 }
 
-body {
+html, body {
     min-height: 100vh;
-    max-width: 99.5vw;
+    width: 100vw;
+    overflow-x: hidden;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -19,13 +20,13 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: #5B8899;
+    background-color: #FFFF;
 }
 
 .logo img{
-    margin: 5px 0px 0px 5px;
-    height: 50px;
-    width: 50px;
+    margin: 1px 0px 0px 1px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
 }
 
@@ -98,9 +99,9 @@ display: none;
   background: linear-gradient(
     to bottom, 
     black, black 20%, 
-    #5B8899 20%, #5B8899 40%, 
+    #FFFF 20%, #FFFF 40%, 
     black 40%, black 60%, 
-    #5B8899 60%, #5B8899 80%, 
+    #FFFF 60%, #FFFF 80%, 
     black 80%, black 100%
   );
 }
@@ -112,14 +113,14 @@ display: none;
   right: -250px;
   width: 200px;
   height: 100%;
-  background-color: #5B8899;
+  background-color: #000000;
   transition: 0.3s;
   padding: 0px 10px;
   box-sizing: border-box;
 }
 
 #hamburger-menu h3 {
-color: #B9FAF8;
+color: #FFFF;
 font-size: 2.2rem;
 }
 
@@ -130,10 +131,12 @@ padding-left: 0px;
 #hamburger-menu li {
 list-style-type: none;
 line-height: 3rem;
+margin-top: 10px;
 }
 
 #hamburger-menu a {
-color: #B9FAF8;
+margin-top: 10px;
+color: #FFFF;
 font-size: 1.3rem;
 text-decoration: none;
 }
@@ -161,11 +164,81 @@ opacity: 0.4;
   background-repeat: no-repeat;
   z-index: -3;
   width: 100vw;
-  height: 80vh;
+  height: 40vh;
   position: relative;
   display: flex;
   justify-content: center;
 }
+
+.flutuante{
+  position: absolute;
+  margin-top: 40px;
+}
+
+.flutuante h1{
+  color: #0A8419;
+}
+
+.botao_explorar {
+  position: absolute;
+  border: solid 1px green;
+  opacity: 0.3;
+  padding: 10px;
+}
+
+.botao_explorar a{
+  text-decoration: none;
+  font-style: none;
+  color: white;
+}
+
+.titulo-section{
+  text-align: center;
+}
+
+.cards{
+  width: 80vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card1 img{
+  width: 80vw;
+  height: 40vh;
+}
+
+.card1 p {
+  padding: 5px;
+  font-size: 1.12rem;
+}
+
+.abrir, .abrir a{
+  border: solid 1px #33BB69;
+  background-color: #33BB69;
+  text-decoration: none;
+  color: #FFFF;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .aluno_footer{
   display: none;
@@ -190,6 +263,5 @@ opacity: 0.4;
     text-align: center;
     color: white;
     font-size: 12px;
-    z-index: -2;
 }
 
