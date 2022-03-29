@@ -1,36 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-html, body {
-    min-height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .cabecalho {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #FFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #FFFF;
 }
 
-.logo img{
-    margin: 1px 0px 0px 1px;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+.logo img {
+  margin: 1px 0px 0px 1px;
+  height: 60px;
+  width: 50px;
+  border-radius: 50%;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -45,43 +46,43 @@ html, body {
 }
 
 #main-menu {
-display: none;
-height: 100px;
-width: 100%;
-background: #3D0E61;
-margin: 0px;  
-z-index: 9;
+  display: none;
+  height: 100px;
+  width: 100%;
+  background: #3D0E61;
+  margin: 0px;
+  z-index: 9;
 }
 
 #main-menu ul {
-max-width: 800px;
-width: 100%;
-height: 100%;
-margin: 0px auto;
-padding: 0px;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-z-index: 9;
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
 }
 
 #main-menu li {
-list-style-type: none;
-font-size: 2rem;
+  list-style-type: none;
+  font-size: 2rem;
 }
 
 #main-menu a {
-color: #B9FAF8;
-font-size: 1.5rem;
-text-decoration: none;
+  color: #B9FAF8;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 #main-menu a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
-#hamburger-input{
-display: none;
+#hamburger-input {
+  display: none;
 }
 
 #hamburger-menu {
@@ -96,14 +97,12 @@ display: none;
   padding: 0px;
   margin: 0px;
   font-family: 'Cabin', Sans-serif;
-  background: linear-gradient(
-    to bottom, 
-    black, black 20%, 
-    #FFFF 20%, #FFFF 40%, 
-    black 40%, black 60%, 
-    #FFFF 60%, #FFFF 80%, 
-    black 80%, black 100%
-  );
+  background: linear-gradient(to bottom,
+      black, black 20%,
+      #FFFF 20%, #FFFF 40%,
+      black 40%, black 60%,
+      #FFFF 60%, #FFFF 80%,
+      black 80%, black 100%);
 }
 
 #hamburger-menu #sidebar-menu {
@@ -120,97 +119,203 @@ display: none;
 }
 
 #hamburger-menu h3 {
-color: #FFFF;
-font-size: 2.2rem;
+  color: #FFFF;
+  font-size: 2.2rem;
 }
 
 #hamburger-menu ul {
-padding-left: 0px;
+  padding-left: 0px;
 }
 
 #hamburger-menu li {
-list-style-type: none;
-line-height: 3rem;
-margin-top: 10px;
+  list-style-type: none;
+  line-height: 3rem;
+  margin-top: 10px;
 }
 
 #hamburger-menu a {
-margin-top: 10px;
-color: #FFFF;
-font-size: 1.3rem;
-text-decoration: none;
+  margin-top: 10px;
+  color: #FFFF;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
 #hamburger-menu a:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
-#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
   visibility: visible;
   left: 0;
 }
-#hamburger-input:checked ~ .overlay{
- visibility: visible;
-opacity: 0.4;
+
+#hamburger-input:checked~.overlay {
+  visibility: visible;
+  opacity: 0.4;
 }
 
-#sidebar-menu, #sidebar-menu h3{
+#sidebar-menu,
+#sidebar-menu h3 {
   padding-top: 10px;
 }
 
-.banner{
-  background-image: url("https://www.oficinadanet.com.br/imagens/post/30022/capa-studio-ghibli-lanca-no-brasil-suas-trilhas-sonoras-no-spotify-01_1400x875_5e6168fc71454.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -3;
-  width: 100vw;
-  height: 40vh;
-  position: relative;
+/* ------------------------------------------------------ */
+/* Seção de estilização do Banner da página */
+.secBanner {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: auto;
 }
 
-.flutuante{
-  position: absolute;
-  margin-top: 40px;
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; 
+  width: 100vw;
+  height: 30vh;
+  z-index: -3;
 }
 
-.flutuante h1{
-  color: #0A8419;
+.banner .flutuante {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .botao_explorar {
-  position: absolute;
-  border: solid 1px green;
-  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+
+.botao_explorar a {
+  color: white
+}
+
+.botao_explorar :hover {
+  transform: scale(1.25, 1.25);
+  background-color: rgb(255, 6, 47);
+}
+
+/* Seção de estilização dos Cards da página */
+.secCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 80vw;
+  min-height: auto;
+  grid-column-gap: 5%;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.cards img {
+  width: 80vw;
+  height: 30vh;
+}
+
+.cards p {
+  padding: 5px;
+  font-size: 1.12rem;
+}
+
+.abrir a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: solid 1px #33BB69;
+  background-color: #33BB69; 
+  width: 150px;
+  height: 50px;
+  color: #FFFF;
+}
+
+/* Seção de estilização do Footer página */
+
+
+
+/* --------------------------------------- */
+
+/* .banner {
+  background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -3;
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  
+} */
+
+/*.flutuante {
+  /* position: absolute; 
+  margin-top: 40px;
+}
+
+.flutuante h1 {
+  color: white;
+}
+
+.botao_explorar {
+  /* position: absolute; 
+  border: solid 1px white;
   padding: 10px;
 }
 
-.botao_explorar a{
+.botao_explorar a {
   text-decoration: none;
   font-style: none;
   color: white;
 }
 
-.titulo-section{
-  text-align: center;
-}
 
-.cards{
+
+
+/* .cards {
   width: 80vw;
   height: 80vh;
-  margin-left: auto;
-  margin-right: auto;
-}
+  margin-left: 10vw;
+  margin-right: 10vw;
+} */
 
-.card1{
+/* .card1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card1 img{
-  width: 80vw;
+.card1 img {
+  width: 70vw;
   height: 40vh;
 }
 
@@ -219,14 +324,36 @@ opacity: 0.4;
   font-size: 1.12rem;
 }
 
-.abrir, .abrir a{
-  border: solid 1px #33BB69;
-  background-color: #33BB69;
-  text-decoration: none;
-  color: #FFFF;
-  width: 150px;
-  height: 50px;
-  text-align: center;
+ */
+
+/* Grid dos Cards contendo os filmes */
+
+
+
+
+/* Display Flex para posicionar o botão */
+
+/* --------------------------------- */
+
+/* Centralização do texto, dentro do botão */
+
+/* -------------------------------------- */
+
+/* Formatação da fonteos paragrafos */
+
+/* -------------------------------------- */
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+
+.rodape {
+  display: flex;
+  bottom: 0;
 }
 
 
@@ -240,28 +367,53 @@ opacity: 0.4;
 
 
 
-.aluno_footer{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aluno_footer {
   display: none;
 }
-  
+
 .aluno_footer img {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
-.aluno_footer h1, p {
-    font-size: 75%;
+.aluno_footer h1,
+p {
+  font-size: 75%;
 }
 
-.rodape{
-    bottom:0;
-    top: auto;
-    position: relative;
-    width: 100vw;
-    height:auto;  
-    background-color:#5B8899;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-}
-
+ /* .rodape {
+  height: 50px;
+  background-color: #5B8899;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  position: static;
+  width: 100%;
+}  */
