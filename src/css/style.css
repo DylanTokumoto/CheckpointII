@@ -11,6 +11,8 @@ html,
 body {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -205,13 +207,28 @@ body {
   background-color: rgb(255, 6, 47);
 }
 
-/* Seção de estilização dos Cards da página */
 .secCards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+#links-fixos{
+  background: #33BB69;
+  margin: 20px;
+  color: white;
+  width: 50px;
+  padding:5px;
+  position:fixed;
+  top: 100px;
+  border-radius: 15px;
+}
+
+#links-fixos a {
+  text-decoration: none;
+  color: white;
 }
 
 .cards {
@@ -233,6 +250,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: #9C928A;
 }
 
 .cards img {
@@ -240,10 +259,24 @@ body {
   height: 30vh;
 }
 
+.abrir{
+  z-index: 2;
+}
 .cards p {
   padding: 5px;
   font-size: 1.12rem;
 }
+
+.abrir :focus{
+  background-color: #000000;
+}
+
+/*.abrir :hover
+{
+        -webkit-transform: scale(1.8);
+        -ms-transform: scale(1.8);
+        transform: scale(1.8);
+}*/
 
 .abrir a{
   display: flex;
@@ -257,142 +290,16 @@ body {
   color: #FFFF;
 }
 
-/* Seção de estilização do Footer página */
-
-
-
-/* --------------------------------------- */
-
-/* .banner {
-  background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -3;
-  width: 100vw;
-  height: 20vh;
-  position: relative;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  
-} */
-
-/*.flutuante {
-  /* position: absolute; 
-  margin-top: 40px;
-}
-
-.flutuante h1 {
-  color: white;
-}
-
-.botao_explorar {
-  /* position: absolute; 
-  border: solid 1px white;
-  padding: 10px;
-}
-
-.botao_explorar a {
-  text-decoration: none;
-  font-style: none;
-  color: white;
-}
-
-
-
-
-/* .cards {
-  width: 80vw;
-  height: 80vh;
-  margin-left: 10vw;
-  margin-right: 10vw;
-} */
-
-/* .card1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card1 img {
-  width: 70vw;
-  height: 40vh;
-}
-
-.card1 p {
-  padding: 5px;
-  font-size: 1.12rem;
-}
-
- */
-
-/* Grid dos Cards contendo os filmes */
-
-
-
-
-/* Display Flex para posicionar o botão */
-
-/* --------------------------------- */
-
-/* Centralização do texto, dentro do botão */
-
-/* -------------------------------------- */
-
-/* Formatação da fonteos paragrafos */
-
-/* -------------------------------------- */
-
-
-
-
-
-
-
-/* ---------------------------------------------------- */
-
 .rodape {
+  flex-shrink: 0;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFF;
   display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .aluno_footer {
   display: none;
@@ -407,13 +314,3 @@ body {
 p {
   font-size: 75%;
 }
-
- /* .rodape {
-  height: 50px;
-  background-color: #5B8899;
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  position: static;
-  width: 100%;
-}  */
