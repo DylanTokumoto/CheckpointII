@@ -118,6 +118,7 @@ body {
   transition: 0.3s;
   padding: 0px 10px;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 #hamburger-menu h3 {
@@ -178,7 +179,7 @@ body {
   background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; 
+  position: relative;
   width: 100vw;
   height: 30vh;
   z-index: -3;
@@ -215,13 +216,14 @@ body {
   flex-wrap: wrap;
 }
 
-#links-fixos{
+#links-fixos {
   background: #33BB69;
   margin: 20px;
   color: white;
   width: 50px;
-  padding:5px;
-  position:fixed;
+  padding: 5px;
+  position: fixed;
+  position: absolute;
   top: 100px;
   border-radius: 15px;
 }
@@ -259,15 +261,16 @@ body {
   height: 30vh;
 }
 
-.abrir{
+.abrir {
   z-index: 2;
 }
+
 .cards p {
   padding: 5px;
   font-size: 1.12rem;
 }
 
-.abrir :focus{
+.abrir :focus {
   background-color: #000000;
 }
 
@@ -278,16 +281,32 @@ body {
         transform: scale(1.8);
 }*/
 
-.abrir a{
+.abrir a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   border: solid 1px #33BB69;
-  background-color: #33BB69; 
+  background-color: #33BB69;
   width: 150px;
   height: 50px;
   color: #FFFF;
+}
+
+.voltar{
+  border: solid 1px ;
+  width: 35vw;
+  background-color: #33BB69;
+  border-radius: 5px;
+  margin-left: 35vw;
+  padding: 6px;
+  margin-bottom: 5px;
+}
+
+.voltar a{
+  text-decoration: none;
+  margin-left: 6px;
+  color: white;
 }
 
 .rodape {
@@ -313,4 +332,27 @@ body {
 .aluno_footer h1,
 p {
   font-size: 75%;
+}
+
+@media (min-width: 480px) and (orientation: portrait) {
+  .cabecalho {
+    padding: 15px;
+  }
+
+  .banner {
+    background-size: cover;
+  }
+
+  .flutuante {
+    margin: 20px;
+  }
+
+  .secCards {
+    display: grid;
+    grid-row: 1;
+  }
+
+  #links-fixos {
+    margin-top: 60px;
+  }
 }
