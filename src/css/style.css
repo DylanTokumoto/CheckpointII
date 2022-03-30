@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
+/*Common Breakpoints:
+desktop: 1200px;
+notebook: 992px;
+tablet: 768px;
+celular: 480px;*/
+
 * {
   margin: 0;
   padding: 0;
@@ -320,9 +326,9 @@ p {
   font-size: 75%;
 }
 
-@media (min-width: 480px) and (orientation: portrait) {
+@media (min-width: 768px) and (orientation: portrait) {
   .cabecalho {
-    padding: 15px;
+    padding: 10px;
   }
 
   .banner {
@@ -333,12 +339,23 @@ p {
     margin: 20px;
   }
 
-  .secCards {
+  .cards {
     display: grid;
-    grid-row: 1;
+    grid-column: 2;
   }
 
-  #links-fixos {
-    margin-top: 60px;
+  .cards img{
+    width: 30vw;
+    height: 20vh;
   }
+
+  .card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6{
+  width: 40vw;
+}
+
 }
