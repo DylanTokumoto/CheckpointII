@@ -24,13 +24,13 @@ body {
 }
 
 .cabecalho {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: #FFFF;
+  background-color: #ffff;
   position: fixed;
   z-index: 5;
   padding: 10px;
@@ -51,7 +51,7 @@ body {
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
   overflow: hidden;
   background: black;
   z-index: -1;
@@ -61,7 +61,7 @@ body {
   display: none;
   height: 100px;
   width: 100vw;
-  background: #3D0E61;
+  background: #3d0e61;
   margin: 0px;
   z-index: 9;
 }
@@ -84,7 +84,7 @@ body {
 }
 
 #main-menu a {
-  color: #B9FAF8;
+  color: #b9faf8;
   font-size: 1.5rem;
   text-decoration: none;
 }
@@ -109,12 +109,19 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: 'Cabin', Sans-serif;
-  background: linear-gradient(to bottom,
-      black, black 20%,
-      #FFFF 20%, #FFFF 40%,
-      black 40%, black 60%,
-      #FFFF 60%, #FFFF 80%,
-      black 80%, black 100%);
+  background: linear-gradient(
+    to bottom,
+    black,
+    black 20%,
+    #ffff 20%,
+    #ffff 40%,
+    black 40%,
+    black 60%,
+    #ffff 60%,
+    #ffff 80%,
+    black 80%,
+    black 100%
+  );
 }
 
 #hamburger-menu #sidebar-menu {
@@ -132,7 +139,7 @@ body {
 }
 
 #hamburger-menu h3 {
-  color: #FFFF;
+  color: #ffff;
   font-size: 2.2rem;
 }
 
@@ -148,7 +155,7 @@ body {
 
 #hamburger-menu a {
   margin-top: 10px;
-  color: #FFFF;
+  color: #ffff;
   font-size: 1.3rem;
   text-decoration: none;
 }
@@ -157,12 +164,12 @@ body {
   text-decoration: underline;
 }
 
-#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
   visibility: visible;
   left: 0;
 }
 
-#hamburger-input:checked~.overlay {
+#hamburger-input:checked ~ .overlay {
   visibility: visible;
   opacity: 0.4;
 }
@@ -187,13 +194,29 @@ body {
   margin-top: 85px;
   display: flex;
   flex-wrap: wrap;
-  background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
+  background-image: url('https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   width: 100vw;
   height: 30vh;
   z-index: -3;
+}
+
+.bnr {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+}
+
+.cardBanner {
+  width: 100%;
+  height: 100%;
+}
+
+.cardBanner img {
+  width: 100%;
+  height: 100%;
 }
 
 .banner .flutuante {
@@ -211,7 +234,7 @@ body {
 }
 
 .botao_explorar a {
-  color: white
+  color: white;
 }
 
 .botao_explorar :hover {
@@ -248,7 +271,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #9C928A;
+  background-color: #9c928a;
 }
 
 .cards img {
@@ -266,7 +289,7 @@ body {
   font-size: 1.12rem;
 }
 
-.abri{
+.abri {
   top: 15px;
 }
 
@@ -274,11 +297,10 @@ body {
   background-color: #000000;
 }
 
-.abrir :hover
-{
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
+.abrir :hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .abrir a {
@@ -286,24 +308,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: solid 1px #33BB69;
-  background-color: #33BB69;
+  border: solid 1px #33bb69;
+  background-color: #33bb69;
   width: 150px;
   height: 50px;
-  color: #FFFF;
+  color: #ffff;
 }
 
-.voltar{
-  border: solid 1px ;
+.voltar {
+  border: solid 1px;
   width: 35vw;
-  background-color: #33BB69;
+  background-color: #33bb69;
   border-radius: 5px;
   margin-left: 35vw;
   padding: 6px;
   margin-bottom: 5px;
 }
 
-.voltar a{
+.voltar a {
   text-decoration: none;
   margin-left: 6px;
   color: white;
@@ -313,7 +335,7 @@ body {
   flex-shrink: 0;
   height: 60px;
   background-color: #000000;
-  color: #FFFF;
+  color: #ffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,18 +375,17 @@ p {
     overflow-x: hidden;
   }
 
-  .cards img{
+  .cards img {
     width: 40vw;
     height: 40vh;
   }
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
-  width: 45vw;
-}
-
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: 45vw;
+  }
 }

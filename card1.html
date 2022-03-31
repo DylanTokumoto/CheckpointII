@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css" />
 
     <title>GhibliFlix - Spirited Away</title>
-     <body>
-      <header class="cabecalho">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <img
+          src="https://www.nicepng.com/png/full/95-958840_pegatina-totoro-vinilo-totoro-wallpaper-phone.png"
+          alt=""
+        />
+      </div>
 
-        <div class="logo">
-            <img src="https://www.nicepng.com/png/full/95-958840_pegatina-totoro-vinilo-totoro-wallpaper-phone.png"
-                alt="">
-  
+      <input type="checkbox" id="hamburger-input" class="burger-shower" />
+      <label id="hamburger-menu" for="hamburger-input">
+        <nav id="sidebar-menu">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">Itens</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
+        </nav>
+      </label>
+
+      <div class="overlay"></div>
+    </header>
+    <main>
+      <section class="bnr">
+        <div class="cardBanner">
+          <img src="./src/img/spirited-away.jpg" alt="" />
         </div>
-  
-        <input type="checkbox" id="hamburger-input" class="burger-shower" />
-        <label id="hamburger-menu" for="hamburger-input">
-            <nav id="sidebar-menu">
-                <h3>Menu</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#">Itens</a></li>
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Contatos</a></li>
-                </ul>
-            </nav>
-        </label>
-  
-        <div class="overlay"></div>
-    </head>
-    
+      </section>
+      <section class="titleDescription"></section>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
