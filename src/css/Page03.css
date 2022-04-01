@@ -1,0 +1,130 @@
+/* Import de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/*Common Breakpoints:
+desktop: 1280px;
+notebook: 992px;
+tablet: 768px;
+celular: 480px;*/
+
+/*============= SEÇÃO DO RESET ==============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*============= SEÇÃO DAS VARIAVÉIS ==============*/
+:root {
+
+    /* colors */
+    --hue: 183;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 100% 15%);
+    --base-color-second: hsl(var(--hue) 100% 30%);
+    --title-color: hsl(var(--hue) 83% 38%);
+    --text-color: rgb(77, 28, 27);
+    --text-color-light: rgb(153, 59, 0);
+    --body-color: rgb(255, 255, 255);
+}
+
+/*============= SEÇÃO DA BASE ==============*/
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Estilização do Cabeçalho */
+/* .cabecalho {
+    max-height: 137px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--body-color);
+    position: fixed;
+    z-index: 5;
+    padding: 10px;
+} */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    margin: 1px 0px 0px 1px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/*============= SEÇÃO DO LAYOUT ==============*/
+h2 {
+    color: var(--body-color);
+    margin-top: 0.5rem;
+}
+ 
+p {
+    margin: 1rem;
+}
+
+/* Seção de estilização do Banner da página */
+.secBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+}
+
+.media {
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 20vh;
+}
+  
+.media img {
+    width: 100vw;
+    height: auto;
+}
+
+/* Estilização do Rodapé da página */
+.rodape {
+    flex-shrink: 0;
+    height: 60px;
+    background-color: #000000;
+    color: #FFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0;
+}
+
+.aluno_footer img {
+    height: 40px;
+    width: 40px;
+}
+
+.aluno_footer h1,
+p {
+    font-size: 75%;
+}

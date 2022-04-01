@@ -47,7 +47,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
   background-color: var(--body-color);
   position: fixed;
@@ -59,7 +59,6 @@ body {
   margin: 1px 0px 0px 1px;
   height: 60px;
   width: 50px;
-  border-radius: 50%;
 }
 
 .overlay {
@@ -200,11 +199,9 @@ p {
 
 .divisor-1 {
   height: 2px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 100%, 15%),
-    hsla(var(--hue), 65%, 88%, 0.34)
-  );
+  background: linear-gradient(270deg,
+      hsla(var(--hue), 100%, 15%),
+      hsla(var(--hue), 65%, 88%, 0.34));
 }
 
 /* Estilização do Rodapé da página */
@@ -236,11 +233,11 @@ p {
     padding: 10px;
   }
 
-  .menu-mobile{
+  .menu-mobile {
     display: none;
   }
 
-  .menu-desktop{
+  .menu-desktop {
     display: initial;
   }
 
@@ -272,12 +269,13 @@ p {
   .card6 {
     width: 40vw;
   }
-  .divisor-1{
+
+  .divisor-1 {
     display: none;
   }
 }
 
-@media (max-width: 990px){
+@media (max-width: 990px) {
   .aluno_footer {
     display: none;
   }
@@ -289,13 +287,13 @@ p {
     height: 550px;
   }
 
-  .divisor-1{
+  .divisor-1 {
     display: none;
   }
-  
+
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 95vw;
     min-height: 40vh;
@@ -314,26 +312,26 @@ p {
   .card6 {
     width: 25vw;
   }
-  
-  .rodape{
+
+  .rodape {
     top: 30px;
     height: 140px;
     background-color: var(--base-color);
   }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1280px) {
   .media img {
     height: 550px;
   }
 
-  .divisor-1{
+  .divisor-1 {
     display: none;
   }
-  
+
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 95vw;
     min-height: 40vh;
@@ -353,8 +351,8 @@ p {
     min-height: 85vh;
     width: 25vw;
   }
-  
-  .rodape{
+
+  .rodape {
     top: 30px;
     height: 150px;
     background-color: var(--base-color);
