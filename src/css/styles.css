@@ -107,7 +107,7 @@ p {
 
 .media img {
   width: 100vw;
-  height: auto;
+  max-height: 90vh;
 }
 
 .media .media-body {
@@ -121,10 +121,7 @@ p {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.cards a {
-  text-decoration: none;
+  margin-bottom: 40px;
 }
 
 .titulo-section {
@@ -161,10 +158,21 @@ p {
   height: 30vh;
 }
 
+.cards h2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 80px;
+}
+
 .cards p {
   text-align: justify;
   padding: 5px;
   font-size: 1.12rem;
+}
+
+.cards a {
+  text-decoration: none;
 }
 
 /*====== SEÇÃO BOTÃO ABRIR ======*/
@@ -206,14 +214,26 @@ p {
 
 /* Estilização do Rodapé da página */
 .rodape {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-row-gap: 10px;
   flex-shrink: 0;
-  height: 60px;
-  background-color: #000000;
+  height: auto;
+  background-color: #1a1c1d;
   color: #FFFF;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   bottom: 0;
+}
+
+.direitos {
+  text-align: center;
+  padding: 10px;
+}
+
+.rodape .direitos  {
+  grid-column: 1/5;
+  justify-items: center;
 }
 
 .aluno_footer img {
@@ -275,11 +295,11 @@ p {
   }
 }
 
-@media (max-width: 990px) {
+/* @media (max-width: 990px) {
   .aluno_footer {
     display: none;
   }
-}
+} */
 
 @media (min-width: 992px) {
 
@@ -315,8 +335,7 @@ p {
 
   .rodape {
     top: 30px;
-    height: 140px;
-    background-color: var(--base-color);
+    min-height: 140px;
   }
 }
 
@@ -348,13 +367,12 @@ p {
   .card4,
   .card5,
   .card6 {
-    min-height: 85vh;
+    max-height: 85vh;
     width: 25vw;
   }
 
   .rodape {
     top: 30px;
-    height: 150px;
-    background-color: var(--base-color);
+    min-height: 150px;
   }
 }
