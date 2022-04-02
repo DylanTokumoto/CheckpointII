@@ -185,6 +185,12 @@ p {
     width: 40px;
 }
 
+.aluno_footer img:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
 /* Configurações de responsividade da página */
 @media (min-width: 575px) {
     .secVideo {
@@ -202,9 +208,3 @@ p {
         height: auto;
     }
 }
-
-/* fazer duas caixas grids no rodape contendo os 4 primeiro alunos
-e então outra caixa contendo os outros 3
-e então usar as propriedades do fr
-e definir individualmente a posição dos 3 elementos para ficarem centralizados
- */
