@@ -1,18 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
-    <title>GhibliFlix | Ponyo - Uma Amizade que Veio do Mar</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/Page01.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/css/login.css">
+    <title>GhibliFlix - Login</title>
 </head>
 
 <body>
@@ -36,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="teste.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
@@ -54,7 +50,7 @@
                             <a class="nav-link" href="#sobreNos">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="#login">Login</a>
                         </li>
                     </ul>
 
@@ -65,81 +61,39 @@
         </div>
 
     </header>
-
-    <main>
-        <section class="secBanner">
-            <div class="media">
-
-                <img src="https://i0.wp.com/studioghibli.com.br/wp-content/uploads/2020/04/Ponyo-e-Sosuke.jpg?resize=1"
-                    alt="">
-
-                <div class="media-body">
-                    <h1>Ponyo - Uma Amizade que Veio do Mar</h1>
-                    <h3>⭐⭐⭐⭐</h3>
-                    <p>Certa manhã, quando brinca na praia, o pequeno Sosuke encontra um peixe vermelho preso num frasco
-                        de doce. Sosuke liberta o peixinho do frasco, a quem dá o nome de Ponyo, e promete protegê-lo
-                        para sempre. Mas o pai de Ponyo, um feiticeiro que vive no fundo do mar, força o pequeno peixe a
-                        regressar às profundezas. Decidida a tornar-se humana, Ponyo foge para reencontrar Sosuke e
-                        espalha acidentalmente uma poção mágica pelo oceano, transformando as suas irmãs em ondas
-                        gigantes que ameaçam inundar a aldeia de Sosuke. O amor e a responsabilidade, o oceano e a vida,
-                        num mundo fantástico onde a magia também faz parte das coisas naturais do dia-a-dia.</p>
-
-                </div>
-
-                <div class="autor">
-                    <h3>Direção</h3>
-                    <h3>Roteiro</h3>
-                    <h5><a href="https://studioghibli.com.br/diretores-studioghibli/hayao-miyazaki/">Hayao Miyazaki</a>
-                    </h5>
-                    <h5><a href="https://studioghibli.com.br/diretores-studioghibli/hayao-miyazaki/">Hayao Miyazaki</a>
-                    </h5>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="secVideo">
-
-            <div class="card text-left">
-                <div class="card-body">
-                    <h4 class="card-title">Trailer Oficial</h4>
-                    </div>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CsR3KVgBzSM"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- <div class="card-columns">
-
-                <div class="card">
-
-                    <div class="card-body">
-                        <h4 class="card-title">Trailer Oficial</h4>
-
-                    </div>
-
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CsR3KVgBzSM"
-                            allowfullscreen></iframe>
-                    </div>
-
-                </div>
-
-            </div> -->
-
-        </section>
-
-    </main>
-
-    <footer class="rodape" id="sobreNos">
-        
-        <div class="direitos">
-            <h5>Todos os direitos reservados a Studio Ghibli₢</h5>
-            <h5>Made With ❤ - Brazil 2022</h5>
+    <br>
+    <section>
+        <div class="secBanner">
+            <div class="banner"></div>
         </div>
+    </section>
+    <main>
+        </section>
+        <br>
+        <div class="textlogo" id="login">
+            <h1><strong>GhibliFlix</strong></h1>
+        </div>
+        <div class="form-format">
+            <h1></h1>
+            <form action="">
+                <input type="email" name="usuario" placeholder="  Digite seu usuário ou Email">
+                <br>
+                <input type="password" name="senha" placeholder="  Digite sua senha" required>
+                <br>
+                <br>
+                <div id="submit-button">
+                    <a href="index.html">
+                        <input type="button" value="Entrar" id="submit">
+                    </a>
+                </div>
+            </form>
+            <br>
+        </div>
+        <br>
+    </main>
+    <br>
+    <footer class="rodape" id="sobreNos">
+        <h5>Todos os direitos reservados a Studio Ghibli</h5>
 
         <div class="aluno_footer">
             <h1>Anderson Borges</h1>
@@ -191,26 +145,21 @@
 
         <div class="aluno_footer">
             <h1>William Silva</h1>
-            <a href="https://www.linkedin.com/in/william-silva-817673106/" target="_blank"> <img
-                    src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" /> </a>
-            <a href="https://github.com/wkoju84" target="_blank"> <img
-                    src="https://img.icons8.com/ios-glyphs/30/000000/github.png" /> </a>
+            <a href="" target="_blank"> <img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png" /> </a>
+            <a href="" target="_blank"> <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png" /> </a>
         </div>
-
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
 
 </body>
