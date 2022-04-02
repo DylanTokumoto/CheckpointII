@@ -1,0 +1,402 @@
+/* Import de Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/*Common Breakpoints:
+desktop: 1280px;
+notebook: 992px;
+tablet: 768px;
+celular: 480px;*/
+
+/*============= SEÇÃO DO RESET ==============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*============= SEÇÃO DAS VARIAVÉIS ==============*/
+:root {
+
+    /* colors */
+    --hue: 183;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 100% 15%);
+    --base-color-second: hsl(var(--hue) 100% 30%);
+    --title-color: hsl(var(--hue) 83% 38%);
+    --text-color: rgb(77, 28, 27);
+    --text-color-light: rgb(153, 59, 0);
+    --body-color: rgb(255, 255, 255);
+}
+
+/*============= SEÇÃO DA BASE ==============*/
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilização do Cabeçalho */
+.cabecalho {
+    max-height: 137px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    background-color: var(--body-color);
+    position: fixed;
+    z-index: 5;
+    padding: 10px;
+}
+
+.logo img {
+    margin: 1px 0px 0px 1px;
+    height: 60px;
+    width: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+/*============= SEÇÃO DO LAYOUT ==============*/
+h2 {
+    color: var(--body-color);
+    margin-top: 0.5rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+/* Seção de estilização do Banner da página */
+.secBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    margin-top: 85px;
+}
+
+.media {
+    background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.media .media-body {
+    position: absolute;
+}
+
+/* Estilização da seção dos Cards da página */
+.secCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.titulo-section {
+    margin: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 85vw;
+    min-height: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--base-color-second);
+    border-radius: 0.5rem;
+}
+
+.cards img {
+    width: 80vw;
+    height: 30vh;
+}
+
+.cards h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 80px;
+}
+
+.cards p {
+    text-align: justify;
+    padding: 5px;
+    font-size: 1.12rem;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+/*====== SEÇÃO BOTÃO ABRIR ======*/
+.abrir {
+    position: relative;
+    top: auto;
+    margin-bottom: 0;
+}
+
+.abrir :focus {
+    background-color: #000000;
+}
+
+.abrir :hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.abrir a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 1px var(--base-color);
+    background-color: var(--base-color);
+    width: 150px;
+    height: 50px;
+    color: var(--body-color);
+    border-radius: 0 1rem;
+}
+
+.divisor-1 {
+    height: 2px;
+    background: linear-gradient(270deg,
+            hsla(var(--hue), 100%, 15%),
+            hsla(var(--hue), 65%, 88%, 0.34));
+}
+
+/* Estilização do Rodapé da página */
+.rodape {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-row-gap: 10px;
+    flex-shrink: 0;
+    height: auto;
+    background-color: #1a1c1d;
+    color: #FFFF;
+    bottom: 0;
+}
+
+.direitos {
+    text-align: center;
+    padding: 10px;
+}
+
+.rodape .direitos {
+    grid-column: 1/5;
+    justify-items: center;
+}
+
+.aluno_footer img {
+    height: 40px;
+    width: 40px;
+}
+
+.aluno_footer h1,
+p {
+    font-size: 75%;
+}
+
+.aluno_footer img:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+/* Configurações de responsividade da página */
+@media (min-width: 768px) and (orientation: portrait) {
+    .cabecalho {
+        padding: 10px;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .menu-desktop {
+        display: initial;
+    }
+
+    .media {
+        background-size: contain;
+        height: 35vh;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        overflow-x: hidden;
+        grid-column-gap: 20px;
+    }
+
+    .cards img {
+        width: 35vw;
+        height: 30vh;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        width: 40vw;
+    }
+
+    .divisor-1 {
+        display: none;
+    }
+}
+
+/* @media (max-width: 990px) {
+  .aluno_footer {
+    display: none;
+  }
+} */
+
+@media (min-width: 992px) {
+
+    .media {
+        background-size: contain;
+        height: 45vh;
+    }
+
+    .divisor-1 {
+        display: none;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 95vw;
+        min-height: 40vh;
+    }
+
+    .cards img {
+        width: 23vw;
+        height: 20vh;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        width: 25vw;
+    }
+
+    .rodape {
+        top: 30px;
+        min-height: 140px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .media {
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .media img {
+        height: 550px;
+    }
+
+    .divisor-1 {
+        display: none;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 95vw;
+        min-height: 40vh;
+        justify-items: center;
+        grid-row-gap: 30px;
+    }
+
+    .cards img {
+        width: 23vw;
+        height: 30vh;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        max-height: 85vh;
+        width: 25vw;
+    }
+
+    .rodape {
+        top: 30px;
+        min-height: 150px;
+    }
+
+    .card1:hover,
+    .card2:hover,
+    .card3:hover,
+    .card4:hover,
+    .card5:hover,
+    .card6:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    }
+}
