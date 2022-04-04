@@ -1,13 +1,15 @@
-/* Import de Fonte */
+/* ===== Import de Fonte pelo Google Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
  
-/*Common Breakpoints:
+/* ===== Valores utilizados como parâmetros para o @MEDIA =====
+Common Breakpoints:
 desktop: 1280px;
 notebook: 992px;
 tablet: 768px;
-celular: 480px;*/
+celular: 480px;
+*/
 
-/*============= SEÇÃO DO RESET ==============*/
+/* ====== Seção com o RESET da página ===== */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,7 @@ celular: 480px;*/
     text-decoration: none;
 }
 
-/*============= SEÇÃO DAS VARIAVÉIS ==============*/
+/* ===== SEÇÃO DAS VARIAVÉIS ===== */
 :root {
 
     /* colors */
@@ -29,7 +31,7 @@ celular: 480px;*/
     --body-color: rgb(255, 255, 255);
 }
 
-/*============= SEÇÃO DA BASE ==============*/
+/* ===== Seção de estilização do HTML/BODY da página ===== */
 html,
 body {
     height: 100vh;
@@ -44,19 +46,18 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Estilização do Cabeçalho */
+/* ===== Seção de estilização do CABEÇALHO da página ===== */
 .cabecalho {
-    max-height: 137px;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: center; */
     flex-wrap: wrap;
     background-color: var(--body-color);
     position: fixed;
-    z-index: 5;
+    max-height: 137px;
+    width: 100vw;
     padding: 10px;
+    z-index: 5;
 }
 
 .logo img {
@@ -65,21 +66,7 @@ html {
     width: 50px;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .35s, visibility .35s, height .35s;
-    overflow: hidden;
-    background: black;
-    z-index: -1;
-}
-
-/*============= SEÇÃO DO LAYOUT ==============*/
+/* ===== Seção de estilização de alguns titulos e os parágrafos da página ===== */
 h2 {
     color: var(--body-color);
     margin-top: 0.5rem;
@@ -89,7 +76,7 @@ p {
     margin: 1rem;
 }
 
-/* Seção de estilização do Banner da página */
+/* ===== Seção de estilização do BANNER da página ===== */
 .secBanner {
     display: flex;
     flex-direction: column;
@@ -114,7 +101,7 @@ p {
     position: absolute;
 }
 
-/* Estilização da seção dos Cards da página */
+/* ===== Seção de estilização dos CARDS da página ===== */
 .secCards {
     display: flex;
     flex-direction: column;
@@ -175,7 +162,7 @@ p {
     text-decoration: none;
 }
 
-/*====== SEÇÃO BOTÃO ABRIR ======*/
+/* ===== Seção de estilização para o botão ABRIR dos Cards ===== */
 .abrir {
     position: relative;
     top: auto;
@@ -205,6 +192,7 @@ p {
     border-radius: 0 1rem;
 }
 
+/* ===== Seção de estilização do DIVISOR entre os Cards(apenas para o modo mobile) ===== */
 .divisor-1 {
     height: 2px;
     background: linear-gradient(270deg,
@@ -212,7 +200,7 @@ p {
             hsla(var(--hue), 65%, 88%, 0.34));
 }
 
-/* Estilização do Rodapé da página */
+/* ===== Seção de estilização para o RODAPÉ da página ===== */
 .rodape {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -252,18 +240,10 @@ p {
     transform: scale(1.3);
 }
 
-/* Configurações de responsividade da página */
+/* ===== Configurações de responsividade para TABLETS ===== */
 @media (min-width: 768px) and (orientation: portrait) {
     .cabecalho {
         padding: 10px;
-    }
-
-    .menu-mobile {
-        display: none;
-    }
-
-    .menu-desktop {
-        display: initial;
     }
 
     .media {
@@ -298,12 +278,7 @@ p {
     }
 }
 
-/* @media (max-width: 990px) {
-  .aluno_footer {
-    display: none;
-  }
-} */
-
+/* ===== Configurações de responsividade para NOTEBOOKS ===== */
 @media (min-width: 992px) {
 
     .media {
@@ -343,6 +318,7 @@ p {
     }
 }
 
+/* ===== Configurações de responsividade para DESKTOPS ===== */
 @media (min-width: 1280px) {
 
     .media {
