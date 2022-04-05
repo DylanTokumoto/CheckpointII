@@ -356,7 +356,7 @@ p {
     .card4,
     .card5,
     .card6 {
-        max-height: 85vh;
+        min-height: 50vh;
         width: 25vw;
     }
 
