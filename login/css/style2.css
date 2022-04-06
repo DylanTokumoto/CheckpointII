@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 820px) and (min-height: 900px){
+  footer {
+    flex-shrink: 0;
+    height: 60px;
+    background-color: #000000;
+    color: #FFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100vw;
+    position: fixed;
+  }
+  .secBanner{
+    background-position:top;
+  }
+}
+
+@media only screen and (min-width: 992) and (min-height: 600px){
+  footer {
+    flex-shrink: 0;
+    height: 60px;
+    background-color: #000000;
+    color: #FFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100vw;
+    position: fixed;
+  }
+}
+
+html,body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+main{
+  width: 90vw;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: calc(100vh - 85px - 60px);
+}
+
+footer {
+  flex-shrink: 0;
+  height: 60px;
+  background-color: #000000;
+  color: #FFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100vw;
+}
+
+.aluno_footer img {
+  height: 40px;
+  width: 40px;
+}
+
+.aluno_footer h1,
+p {
+  color: white;
+  font-size: 75%;
+}
+
+body{
+  background-color: #00adef;
+}
+
+.cabecalho {
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #FFFF;
+}
+
+.logo img {
+  margin: 1px 0px 0px 1px;
+  height: 60px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#submit-button :hover{
+  background-color: aqua;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  background: black;
+  z-index: -1;
+}
+
+#main-menu {
+  display: none;
+  height: 100px;
+  width: 100%;
+  background: #3D0E61;
+  margin: 0px;
+  z-index: 9;
+}
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #B9FAF8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: right;
+  top: 20px;
+  left: 20px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: inline;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Cabin', Sans-serif;
+  background: linear-gradient(to bottom,
+      black, black 20%,
+      #FFFF 20%, #FFFF 40%,
+      black 40%, black 60%,
+      #FFFF 60%, #FFFF 80%,
+      black 80%, black 100%);
+}
+
+#hamburger-menu #sidebar-menu {
+  display: hidden;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #000000;
+  transition: 0.3s;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #FFFF;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+  margin-top: 10px;
+}
+
+#hamburger-menu a {
+  margin-top: 10px;
+  color: #FFFF;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+}
+
+#hamburger-input:checked~.overlay {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+#sidebar-menu,
+#sidebar-menu h3 {
+  padding-top: 10px;
+}
+
+.banner {
+  background-image: url("https://teoriageek.com.br/wp-content/uploads/2021/05/Studio_Ghibli_especial-teoria-geek-min.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 20vh;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0%;
+  
+}
+
+.form-format {
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.form-format h4{
+  font-family: Arial, Helvetica, sans-serif
+}
+
+input {
+  width: 100%;
+  height: 25px;
+}
+
+input[type=email], input[type=password] {
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.6);
+  height: 50px;
+  width: 250px;
+  font-size: medium;
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 50px;
+  font-size: larger;
+  box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.6);
+
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.flutuante {
+  /* position: absolute; */
+  margin-top: 40px;
+}
+
+.flutuante h1 {
+  color: white;
+  font-size: 65px;
+  text-shadow: #000000 3px 5px 10px;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.textlogo h1{
+  text-align: center;
+  font-size: 85px;
+  text-shadow: #000000 3px 5px 10px;
+  color: #000000;
+}
+
+.botao_explorar {
+  /* position: absolute; */
+  border: solid 1px white;
+  opacity: 0.3;
+  padding: 10px;
+}
+
+.botao_explorar a {
+  text-decoration: none;
+  font-style: none;
+  color: white;
+}
+
+.titulo-section {
+  text-align: center;
+}
+
+.cards {
+  width: 80vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card1 img {
+  width: 80vw;
+  height: 40vh;
+}
+
+.card1 p {
+  padding: 5px;
+  font-size: 1.12rem;
+}
+
+.abrir,
+.abrir a {
+  border: solid 1px #33BB69;
+  background-color: #33BB69;
+  text-decoration: none;
+  color: #FFFF;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+
+/* Grid dos Cards contendo os filmes */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 80vw;
+  margin: 0 auto;
+  grid-column-gap: 5%;
+}
+
+.cards img {
+  width: 85vw;
+  height: 30vh;
+}
+
+/* Display Flex para posicionar o botão */
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+/* --------------------------------- */
+
+/* Centralização do texto, dentro do botão */
+.abrir a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* -------------------------------------- */
+
+/* Formatação da fonteos paragrafos */
+.cards p {
+  padding: 5px;
+  font-size: 1.12rem;
+}
+/* -------------------------------------- */
+
+.banner {
+  float: center;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100vw;
+  height: 35vh;
+  z-index: -2;
+  margin: 0%;
+}
+
+.aluno_footer img {
+  height: 40px;
+  width: 40px;
+}
+
+.aluno_footer h1,
+p {
+  font-size: 75%;
+}
+
+.rodape {
+  height: 50px;
+  background-color: #5B8899;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  position: static;
+  width: 100%;
+} 
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .cabecalho {
+    padding: 10px;
+  }
+
+  .menu-mobile{
+    display: none;
+  }
+
+  .menu-desktop{
+    display: initial;
+  }
+
+  .banner {
+    background-size: cover;
+  }
+
+  .flutuante {
+    margin: 20px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow-x: hidden;
+  }
+
+  .cards img {
+    width: 35vw;
+    height: 30vh;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: 40vw;
+  }
+  .divisor-1{
+    display: none;
+  }
+}
+
+@media (max-width: 991px){
+  .aluno_footer {
+    display: none;
+  }
+}
+
+
+@media (min-width: 992px) {
+  
+  .media img {
+    height: 550px;
+  }
+  
+  .divisor-1{
+    display: none;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    width: 95vw;
+    min-height: 40vh;
+  }
+  
+  .cards img {
+    width: 23vw;
+    height: 20vh;
+  }
+  
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    width: 25vw;
+  }
+  
+  .rodape{
+    top: 30px;
+    height: 140px;
+    margin-top: 2%;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 899px) and (min-width: 300px){
+  input {
+    border-radius: 10px;
+  }
+  
+  input[type=email], input[type=password] {
+    border-radius: 15px;
+  }
+  
+  input[type=submit] {
+    border-radius: 25px;
+  }
+  
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .banner{
+    background-image: url("https://cdn.vox-cdn.com/thumbor/Fp0I7bGJnxzmXCQ-N5MllQElDWc=/928x997:3696x2940/1400x933/filters:focal(1550x1548:2510x2508):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/66888887/Studio_Ghibli_Logo.0.jpg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 900px){
+  .media img {
+    height: 550px;
+  }
+  
+  .divisor-1{
+    display: none;
+  }
+  
+  body{
+    background-color:hsl(196deg 77% 46%);
+  }
+
+  .secBanner{
+    height: auto;
+    margin: 0;
+  }
+
+  .banner{
+    background-image: url('https://i0.wp.com/studioghibli.com.br/wp-content/uploads/2008/07/Studio-Ghibli-Logo.jpg?fit=1920%2C1040&ssl=1');
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    width: 95vw;
+    min-height: 40vh;
+  }
+  
+  .cards img {
+    width: 23vw;
+    height: 30vh;
+  }
+
+  .textlogo h1{
+    font-size: 100px;
+  }
+
+  .secBanner{
+    background-size: 5%;
+  }
+
+  .banner{
+    background-size: 45%;
+  }
+
+  .form-format {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    min-height: 85vh;
+    width: 25vw;
+  }
+
+  .rodape{
+    top: 30px;
+    height: 150px;
+  }
+
+  input {
+    width: 100%;
+    height: 25px;
+  }
+  
+  input[type=email], input[type=password] {
+    padding: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.6);
+    height: 40px;
+    width: 350px;
+    font-size: medium;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    height: 50px;
+    font-size: larger;
+    box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.6);
+  
+  }
+  
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+}
+
